@@ -1,5 +1,3 @@
-const mongoose = require("mongoose");
-
 const projectSchema = new mongoose.Schema({
   nom: { type: String, required: true },
   description: String,
@@ -7,5 +5,4 @@ const projectSchema = new mongoose.Schema({
   statut: String,
   createdAt: { type: Date, default: Date.now }
 });
-
 module.exports = mongoose.model("Project", projectSchema);
